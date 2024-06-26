@@ -7,7 +7,9 @@ import java.net.URL;
 import java.net.URLConnection;
 
 public class WebScraper {
+
 	private URL url;
+
 	public WebScraper(String webUrl) throws MalformedURLException {
 		this.url = new URL(webUrl);
 	}
@@ -21,6 +23,7 @@ public class WebScraper {
 		}
 		return text;
 	}
+
 	public void printHTML() throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(connect().getInputStream()));
 		String line = null;
